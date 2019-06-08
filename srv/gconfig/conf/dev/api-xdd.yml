@@ -1,0 +1,17 @@
+api-xdd:
+  app:
+    name: "go.micro.api.xdd"
+    version: "1.0.0"
+    register_ttl: 30
+    register_interval: 15
+    trace_addr: "192.168.56.188:6831"
+  logger:
+    level: "info"
+    filename: "app.log"
+    max_size: 100
+    max_backups: 10
+    max_age: 7
+    compress: false
+  consul:
+    addrs:
+      - "127.0.0.1:8500"

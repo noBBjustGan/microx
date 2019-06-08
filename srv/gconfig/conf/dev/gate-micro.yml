@@ -1,0 +1,23 @@
+gate-micro:
+  app:
+    name: "gate"
+    version: "1.0.0"
+    register_ttl: 30
+    register_interval: 15
+    trace_addr: "192.168.56.188:6831"
+  hystrix:
+    timout: 5000
+    max_concurrent: 0
+    request_volume_threshold: 0
+    sleep_window: 0
+    error_percent_threshold: 0
+  logger:
+    level: "info"
+    filename: "app.log"
+    max_size: 100
+    max_backups: 10
+    max_age: 7
+    compress: false
+  consul:
+    addrs:
+      - "127.0.0.1:8500"
